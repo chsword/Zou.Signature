@@ -25,8 +25,8 @@ namespace Zou.Signature
         private float _lastTouchX;
         private float _lastTouchY;
         private Bitmap _bitmap;
-        private float _newPositionOfX;
-        private float newPositionOfY;
+        private float _newPositionOfX=0;
+        private float newPositionOfY=0;
         private Paint _paint;
 
         private Path _path;
@@ -44,20 +44,22 @@ namespace Zou.Signature
       
 
         //View Properties
-        private Color _strokeColor;
+        
 
         private const string SvgEnd = "\" fill=\"none\" stroke=\"black\" stroke-width=\"1\"/></svg>";
         private bool _touchReleased;
         private string _vectorStringData;
         private float _widthRatio;
         public Color CanvasColor { get; set; }
-      
-   
-        public void SetStrokeColor(Color strokeColor)
+
+        private Color _strokeColor;
+
+        public Color StrokeColor
         {
-            this._strokeColor = strokeColor;
-            _paint.Color = strokeColor;
+            get { return _strokeColor; }
+            set { _paint.Color = _strokeColor = value; }
         }
+
         private int _strokeWidth;
 
         public int StrokeWidth
