@@ -1,5 +1,14 @@
 ## Zou.Signature
 
+[![Build status](https://ci.appveyor.com/api/projects/status/g1bbe17lw4a4linl?svg=true)](https://ci.appveyor.com/project/chsword/zou-signature)
+
+### Install
+
+``` powershell
+Install-Package Zou.Signature
+```
+
+### Sample
 axml:
 
 ``` xml
@@ -23,6 +32,7 @@ axml:
         android:layout_height="wrap_content" />
 </LinearLayout>
 ```
+
 activity:
 
 ``` csharp
