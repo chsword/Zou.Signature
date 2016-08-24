@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zou.Signature", "source\Zou.Signature\Zou.Signature.csproj", "{2D3EE471-6898-447D-8D77-981F7D7A2E73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zou.Signature.Sample", "sample\Zou.Signature.Sample\Zou.Signature.Sample.csproj", "{088BCE43-694C-482A-84A2-A8630D85D75B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A714279A-BE3F-4F0A-80F0-FBF9A1F77F4A}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D3EE471-6898-447D-8D77-981F7D7A2E73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D3EE471-6898-447D-8D77-981F7D7A2E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D3EE471-6898-447D-8D77-981F7D7A2E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D3EE471-6898-447D-8D77-981F7D7A2E73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{088BCE43-694C-482A-84A2-A8630D85D75B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{088BCE43-694C-482A-84A2-A8630D85D75B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{088BCE43-694C-482A-84A2-A8630D85D75B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{088BCE43-694C-482A-84A2-A8630D85D75B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{088BCE43-694C-482A-84A2-A8630D85D75B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{088BCE43-694C-482A-84A2-A8630D85D75B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
