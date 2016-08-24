@@ -7,9 +7,12 @@
 ``` powershell
 Install-Package Zou.Signature
 ```
+### Example
 
-### Sample
-axml:
+![image](https://cloud.githubusercontent.com/assets/274085/17927337/cc0ed51c-6a27-11e6-80e8-c32b88e7ac23.png)
+
+### Sample Code
+**axml:**
 
 ``` xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -33,7 +36,7 @@ axml:
 </LinearLayout>
 ```
 
-activity:
+**activity:**
 
 ``` csharp
     public class MainActivity : Activity
