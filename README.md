@@ -29,7 +29,7 @@ Install-Package Zou.Signature
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Get Svg" />
-    <Zou.Signature.PocketSignatureView
+    <Zou.Signature.SignatureView
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -46,7 +46,7 @@ Install-Package Zou.Signature
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
-            var view = FindViewById<PocketSignatureView>(Resource.Id.view); 
+            var view = FindViewById<SignatureView>(Resource.Id.view); 
             Button clear = FindViewById<Button>(Resource.Id.clear);
             clear.Click += (s, e) =>
             {

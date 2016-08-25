@@ -17,7 +17,7 @@ namespace Zou.Signature.Sample
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
-            var view = FindViewById<PocketSignatureView>(Resource.Id.view); 
+            var view = FindViewById<SignatureView>(Resource.Id.view); 
             Button clear = FindViewById<Button>(Resource.Id.clear);
             clear.Click += (s, e) =>
             {

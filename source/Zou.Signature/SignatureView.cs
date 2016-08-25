@@ -16,7 +16,7 @@ using Orientation = Android.Content.Res.Orientation;
 
 namespace Zou.Signature
 {
-    public class PocketSignatureView : View
+    public class SignatureView : View
     {
         private bool _autoTouchtriggered;
         
@@ -101,28 +101,28 @@ namespace Zou.Signature
 
         #region Ctor
 
-        public PocketSignatureView(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
+        public SignatureView(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
         {
             Init();
         }
 
-        public PocketSignatureView(Context context) : base(context)
+        public SignatureView(Context context) : base(context)
         {
             Init();
         }
 
-        public PocketSignatureView(Context context, IAttributeSet attrs) : base(context, attrs)
+        public SignatureView(Context context, IAttributeSet attrs) : base(context, attrs)
         {
             Init();
         }
 
-        public PocketSignatureView(Context context, IAttributeSet attrs, int defStyleAttr)
+        public SignatureView(Context context, IAttributeSet attrs, int defStyleAttr)
             : base(context, attrs, defStyleAttr)
         {
             Init();
         }
 
-        public PocketSignatureView(Context context, IAttributeSet attrs, int defStyleAttr, int defStyleRes)
+        public SignatureView(Context context, IAttributeSet attrs, int defStyleAttr, int defStyleRes)
             : base(context, attrs, defStyleAttr, defStyleRes)
         {
             Init();
