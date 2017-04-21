@@ -39,13 +39,7 @@ namespace Zou.Signature
         private float _scalePointY;
         private float _screenWidth;
         private RectF _signatureBoundRect;
-     
-      
-      
-
         //View Properties
-        
-
         private const string SvgEnd = "\" fill=\"none\" stroke=\"black\" stroke-width=\"1\"/></svg>";
         private bool _touchReleased;
         private string _vectorStringData;
@@ -393,14 +387,13 @@ namespace Zou.Signature
             float eventY;
             if (_previousWidth != 0.0)
             {
-                _widthRatio = _screenWidth/_previousWidth;
+                _widthRatio = _screenWidth / _previousWidth;
             }
 
             if (Resources.Configuration.Orientation == Orientation.Landscape)
             {
-                var x = e.GetX()/_widthRatio;
-                var y = e.GetY()/
-                        _widthRatio;
+                var x = e.GetX() / _widthRatio;
+                var y = e.GetY() / _widthRatio;
                 eventX = x - _newPositionOfX;
                 eventY = y - newPositionOfY;
             }
@@ -424,7 +417,7 @@ namespace Zou.Signature
                             {
                                 _vectorStringData +=
                                     " \" fill=\"none\" stroke=\"black\" stroke-width=\"1\"/>\n\"  <path d=\"";
-                                _vectorStringData += "M " + eventX + " " + eventY;
+                                _vectorStringData += $"M {eventX} {eventY}";
                             }
                             else
                             {
@@ -432,7 +425,7 @@ namespace Zou.Signature
                                 {
                                     _vectorStringData = _vectorStringData.Replace(SvgEnd, "");
                                 }
-                                _vectorStringData = "M " + eventX + " " + eventY;
+                                _vectorStringData = $"M {eventX} {eventY}";
                             }
                         }
                         _lastTouchX = eventX;
@@ -452,14 +445,10 @@ namespace Zou.Signature
                             if (Resources.Configuration.Orientation == Orientation.Landscape)
                             {
                                 historicalX = e.
-                                    GetHistoricalX(i)/_widthRatio
+                                    GetHistoricalX(i) / _widthRatio
                                               - _newPositionOfX;
-                                historicalY = e.
-                                    GetHistoricalY(i)/_widthRatio
-                                              - newPositionOfY;
-                                _vectorStringData += " L " + e.
-                                    GetHistoricalX(i)/_widthRatio + " " + e.
-                                        GetHistoricalY(i)/_widthRatio;
+                                historicalY = e.GetHistoricalY(i) / _widthRatio - newPositionOfY;
+                                _vectorStringData += $" L {e.GetHistoricalX(i) / _widthRatio} {e.GetHistoricalY(i) / _widthRatio}";
                             }
                             else
                             {
@@ -469,16 +458,14 @@ namespace Zou.Signature
                                 historicalY = e.
                                     GetHistoricalY(i)
                                               - newPositionOfY;
-                                _vectorStringData += " L " + e.
-                                    GetHistoricalX(i) + " " + e.
-                                        GetHistoricalY(i);
+                                _vectorStringData += $" L {e.GetHistoricalX(i)} {e.GetHistoricalY(i)}";
                             }
                             ExpandSignatureBoundRect(historicalX, historicalY);
                             _path.LineTo(historicalX, historicalY);
                         }
 
                         _path.LineTo(eventX, eventY);
-                        _vectorStringData += " L " + eventX + " " + eventY;
+                        _vectorStringData += $" L {eventX} {eventY}";
                         break;
 
                     default:
@@ -492,10 +479,10 @@ namespace Zou.Signature
 
             _touchReleased = true;
 
-            Invalidate((int) (_signatureBoundRect.Left - _strokeWidth/2),
-                (int) (_signatureBoundRect.Top - _strokeWidth/2),
-                (int) (_signatureBoundRect.Right + _strokeWidth/2),
-                (int) (_signatureBoundRect.Bottom + _strokeWidth/2));
+            Invalidate((int)(_signatureBoundRect.Left - _strokeWidth / 2),
+                (int)(_signatureBoundRect.Top - _strokeWidth / 2),
+                (int)(_signatureBoundRect.Right + _strokeWidth / 2),
+                (int)(_signatureBoundRect.Bottom + _strokeWidth / 2));
 
             _lastTouchX = eventX;
             _lastTouchY = eventY;
