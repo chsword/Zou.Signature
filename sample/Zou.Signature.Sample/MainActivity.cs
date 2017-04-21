@@ -12,7 +12,6 @@ namespace Zou.Signature.Sample
     [Activity(Label = "Zou.Signature.Sample", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -32,4 +31,3 @@ namespace Zou.Signature.Sample
         }
     }
 }
-
